@@ -1,4 +1,4 @@
-from app.modules.module_1.implementations import (
+from app.modules.module_athlete.implementations import (
     Base1SubClass1, Base1SubClass2
 )
 

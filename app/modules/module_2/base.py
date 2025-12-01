@@ -1,4 +1,4 @@
-# app/modules/module_2/base.py
+# app/modules/module_2/AtheleteBase.py
 from abc import ABC, abstractmethod
 
 class BaseClass2(ABC):
