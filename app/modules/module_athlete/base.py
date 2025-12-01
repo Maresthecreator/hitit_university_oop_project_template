@@ -23,7 +23,7 @@ class AtletDurumu(Enum):
 class AthleteBase(ABC):
     atlet_numara: int
     isim = str
-    age : int
+    yas : int
     spor_bransi : SporBransi
     durum : AtletDurumu
 
@@ -32,7 +32,7 @@ class AthleteBase(ABC):
         """Her alt sinif ucreti hesapla"""
 
     @abstractmethod
-    def hesap_gecmisi(self) -> float:
+    def hesap_gecmisi(self) -> str:
         """Hesap gecmisini gosterir"""
 
     def durum_guncelle(self, yeni_durum: AtletDurumu) -> float:

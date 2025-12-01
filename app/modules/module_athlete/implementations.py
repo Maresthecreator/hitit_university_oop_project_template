@@ -1,10 +1,15 @@
-# app/modules/module_athlete/implementations.py
-from app.modules.module_athlete.AtheleteBase import BaseClass1
+from __future__ import annotations
 
-class Base1SubClass1(BaseClass1):
-    def method1(self):
-        print(f"Sinif Attribute: {self.base1Attribute}")
+from dataclasses import dataclass
 
-class Base1SubClass2(BaseClass1):
-    def method1(self):
-        print(f"Sinif Attribute: {self.base1Attribute}")
+from .base import AthleteBase, SporBransi, AtletDurumu
+
+
+class ProfesyonelAtlet(AthleteBase):
+    maas: float
+    yillik_kontrat: int
+
+    def abonelik_ucreti_hesapla(self) -> float:
+        return 0.0
+
+    def hesap_gecmisi(self) -> str:
