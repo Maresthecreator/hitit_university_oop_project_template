@@ -20,7 +20,7 @@ class AtletDurumu(Enum):
     Emekli = auto()
 
 @dataclass
-class AthleteBase(ABC):
+class AtletBase(ABC):
     atlet_numara: int
     isim = str
     yas : int
