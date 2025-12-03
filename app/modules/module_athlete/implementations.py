@@ -30,8 +30,8 @@ class AmatorAtlet(AtletBase):
 
     def hesap_gecmisi(self) -> str:
         return (
-            f"[AMATEUR] {self.name} | Branş: {self.sport_branch.name} | "
-            f"Durum: {self.status.name} | Ücret: {self.calculate_membership_fee()}"
+            f"[AMATOR] {self.isim} | Branş: {self.spor_bransi} | "
+            f"Durum: {self.durum} | Ücret: {self.abonelik_ucreti_hesapla()}"
         )
 
 @dataclass
@@ -46,8 +46,8 @@ class GencAtlet(AtletBase):
 
     def hesap_gecmisi(self) -> str:
         return (
-            f"[YOUTH] {self.name} ({self.age}) | Branş: {self.sport_branch.name} | "
-            f"Okul: {self.school_name} | Durum: {self.status.name}"
+            f"[GENC] {self.isim} ({self.yas}) | Branş: {self.spor_bransi} | "
+            f"Okul: {self.okul_ismi} | Durum: {self.durum}"
         )
 
 
