@@ -5,37 +5,37 @@ from dataclasses import dataclass
 from enum import Enum, auto
 
 
-class SporBransi(Enum):
-    Futbol = auto()
-    Basketbol = auto()
-    Voleybol = auto()
-    Yuzme = auto()
-    Tenis = auto()
+class SportBranch(Enum):
+    Football = auto()
+    Basketball = auto()
+    Voleyball = auto()
+    Swimming = auto()
+    Tennis = auto()
     Golf = auto()
 
-class AtletDurumu(Enum):
-    Aktif = auto()
-    Sakat = auto()
-    Aciga_Alindi = auto()
-    Emekli = auto()
+class AthleteStatus(Enum):
+    Active = auto()
+    Injured = auto()
+    Suspended = auto()
+    Retired = auto()
 
 @dataclass
-class AtletBase(ABC):
-    atlet_numara: int
-    isim = str
-    yas : int
-    spor_bransi : SporBransi
-    durum : AtletDurumu
+class AthleteBase(ABC):
+    athlete_id: int
+    name: str
+    age : int
+    sport_branch : SportBranch
+    status : AthleteStatus
 
     @abstractmethod
-    def abonelik_ucreti_hesapla(self) -> float:
+    def calculate_membership_fee(self) -> float:
         """Her alt sinif ucreti hesapla"""
 
     @abstractmethod
-    def hesap_gecmisi(self) -> str:
+    def get_profile_summary(self) -> str:
         """Hesap gecmisini gosterir"""
 
-    def durum_guncelle(self, yeni_durum: AtletDurumu) -> float:
+    def update_status(self, new_status: AthleteStatus) -> None:
         """ Sporcunun durumunu guncelle"""
 
 
