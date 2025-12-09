@@ -117,7 +117,3 @@ def run_demo() -> None:
     print("---Emekli Olmuş Sporcular---")
     for athlete in repo.filter_by_status(AthleteStatus.Retired):
         print(athlete.get_profile_summary())
-
-
-
-
